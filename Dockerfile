@@ -28,6 +28,7 @@ RUN chown -R ${NB_USER} ${HOME}
 
 USER ${NB_USER}
 
+## Ensures that the rstudio version will run on Binder
 RUN python3 -m venv ${VENV_DIR} && \
     # Explicitly install a new enough version of pip
     pip3 install pip==9.0.1 && \
